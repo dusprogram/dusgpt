@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        overflow: hidden;
+      }
+
+      .container {
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+      }
+
+      .error-code {
+        font-size: clamp(100px, 20vw, 200px);
+        font-weight: bold;
+        position: relative;
+        letter-spacing: 5px;
+        background: linear-gradient(45deg, #00f2fe, #4facfe);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-bottom: 1rem;
+        animation: glitch 1s linear infinite;
+      }
+
+      .message {
+        font-size: clamp(16px, 4vw, 24px);
+        margin-bottom: 2rem;
+        color: #a0a0a0;
+      }
+
+      .home-button {
+        background: linear-gradient(45deg, #4a90e2, #a355b9, #ff6b6b);
+        border: none;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        color: #fff;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .home-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 20px rgba(0, 242, 254, 0.2);
+      }
+
+      .home-button::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, #4facfe, #00f2fe);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .home-button:hover::before {
+        opacity: 1;
+      }
+
+      .home-button span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: #4facfe;
+        border-radius: 50%;
+        animation: float 6s infinite;
+      }
+
+      @keyframes glitch {
+        0% {
+          text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        14% {
+          text-shadow: 0.05em 0 0 rgba(255, 0, 0, 0.75),
+            -0.05em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em 0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        15% {
+          text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        49% {
+          text-shadow: -0.05em -0.025em 0 rgba(255, 0, 0, 0.75),
+            0.025em 0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.05em -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        50% {
+          text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        99% {
+          text-shadow: 0.025em 0.05em 0 rgba(255, 0, 0, 0.75),
+            0.05em 0 0 rgba(0, 255, 0, 0.75), 0 -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+        100% {
+          text-shadow: -0.025em 0 0 rgba(255, 0, 0, 0.75),
+            -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
+            -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
+        }
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) translateX(0);
+          opacity: 1;
+        }
+        50% {
+          transform: translateY(-100px) translateX(50px);
+          opacity: 0;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 1rem;
+        }
+
+        .message {
+          font-size: 16px;
+        }
+
+        .home-button {
+          padding: 0.8rem 1.6rem;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="particles" id="particles"></div>
+    <div class="container">
+      <h1 class="error-code">404</h1>
+      <p class="message">Oops! The page you're looking for doesn't exist.</p>
+      <button class="home-button" onclick="goHome()">
+        <span>Back to Home</span>
+      </button>
+    </div>
+
+    <script>
+      function goHome() {
+        window.location.href = "https://dusprogram.github.io/dusgpt/";
+      }
+
+      // Create floating particles
+      const particlesContainer = document.getElementById("particles");
+      const particleCount = 20;
+
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement("div");
+        particle.className = "particle";
+
+        // Random initial position
+        particle.style.left = Math.random() * 100 + "%";
+        particle.style.top = Math.random() * 100 + "%";
+
+        // Random animation delay
+        particle.style.animationDelay = Math.random() * 5 + "s";
+
+        particlesContainer.appendChild(particle);
+      }
+    </script>
+  </body>
+</html>

@@ -71,7 +71,7 @@ const GOOGLE_API_KEY = "your-api-key-here";
 
 ```
 ├── assets/
-│   ├── gemini.svg
+│   ├── dusgpt.svg
 │   └── profile.png
 ├── index.html
 ├── style.css

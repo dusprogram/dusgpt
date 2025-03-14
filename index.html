@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>DusGPT</title>
+    <meta name="title" content="DusGPT - AI Chatbot Assistant" />
+    <meta
+      name="description"
+      content="DusGPT is an intelligent AI assistant helping with homework tips, email writing, language learning, and entertainment. Get instant, helpful responses for your queries."
+    />
+    <meta
+      name="keywords"
+      content="AI chatbot, DusGPT, artificial intelligence, virtual assistant, homework help, email writing, language learning, Dus Mamud"
+    />
+    <meta name="author" content="Dus Mamud" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="generator" content="Visual Studio Code" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://dusprogram.github.io/dusgpt/" />
+    <meta property="og:site_name" content="DusGPT" />
+    <meta property="og:title" content="DusGPT - AI Chatbot Assistant" />
+    <meta
+      property="og:description"
+      content="DusGPT is an intelligent AI assistant helping with homework tips, email writing, language learning, and entertainment. Get instant, helpful responses for your queries."
+    />
+    <meta
+      property="og:image"
+      content="https://dusprogram.github.io/dusgpt/images/preview.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://dusprogram.github.io/dusgpt/" />
+    <meta name="twitter:title" content="DusGPT - AI Chatbot Assistant" />
+    <meta
+      name="twitter:description"
+      content="DusGPT is an intelligent AI assistant helping with homework tips, email writing, language learning, and entertainment. Get instant, helpful responses for your queries."
+    />
+    <meta
+      name="twitter:image"
+      content="https://dusprogram.github.io/dusgpt/images/preview.jpg"
+    />
+    <meta name="twitter:creator" content="@beingdusmamud" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/logo.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- Schema.org markup -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "DusGPT",
+        "url": "https://dusprogram.github.io/dusgpt/",
+        "description": "DusGPT is an intelligent AI assistant helping with homework tips, email writing, language learning, and entertainment.",
+        "applicationCategory": "ChatBot",
+        "operatingSystem": "Any",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "INR"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Dus Mamud"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "DusGPT",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://dusprogram.github.io/dusgpt/images/logo.png"
+          }
+        },
+        "screenshot": {
+          "@type": "ImageObject",
+          "url": "https://dusprogram.github.io/dusgpt/images/preview.jpg"
+        },
+        "featureList": [
+          "AI-powered responses",
+          "Homework assistance",
+          "Email writing help",
+          "Language learning support",
+          "Entertainment suggestions"
+        ],
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "softwareVersion": "1.0.0"
+      }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://dusprogram.github.io/dusgpt/",
+        "name": "DusGPT",
+        "description": "AI-powered chatbot assistant for various tasks",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://dusprogram.github.io/dusgpt/search?q={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <h3 class="navbar__logo">DusGPT</h3>
+      <button class="navbar__button" id="themeToggler">
+        <i class="bx bx-sun"></i>
+      </button>
+    </nav>
+
+    <header class="header">
+      <div class="header__title">
+        <h1>Hello, There!</h1>
+        <h2>How can I help you today?</h2>
+      </div>
+      <div class="suggests">
+        <div class="suggests__item">
+          <p class="suggests__item-text">
+            Give tips on helping kids finish their homework on time
+          </p>
+          <div class="suggests__item-icon">
+            <i class="bx bx-stopwatch"></i>
+          </div>
+        </div>
+        <div class="suggests__item">
+          <p class="suggests__item-text">
+            Help me write an out-of-office email
+          </p>
+          <div class="suggests__item-icon">
+            <i class="bx bx-edit-alt"></i>
+          </div>
+        </div>
+        <div class="suggests__item">
+          <p class="suggests__item-text">
+            Give me phrases to learn a new language
+          </p>
+          <div class="suggests__item-icon">
+            <i class="bx bx-compass"></i>
+          </div>
+        </div>
+        <div class="suggests__item">
+          <p class="suggests__item-text">I need entertainment</p>
+          <div class="suggests__item-icon">
+            <i class="bx bx-wrench"></i>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="chats"></section>
+
+    <section class="prompt">
+      <form action="#" class="prompt__form" novalidate>
+        <div class="prompt__input-wrapper">
+          <input
+            type="text"
+            placeholder="Ask DusGPT anything..."
+            class="prompt__form-input"
+            required
+          />
+          <button class="prompt__form-button" id="sendButton">
+            <i class="bx bx-send"></i>
+          </button>
+          <button class="prompt__form-button" id="deleteButton">
+            <i class="bx bx-trash"></i>
+          </button>
+        </div>
+      </form>
+      <p class="prompt__disclaim">
+        DusGPT provides AI-generated responses. Please verify important
+        information independently.
+      </p>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+{
+  "name": "DusGPT - AI Chatbot Assistant",
+  "short_name": "DusGPT",
+  "description": "AI-powered assistant for homework help, email writing, language learning, and entertainment",
+  "start_url": "https://dusprogram.github.io/dusgpt/",
+  "display": "standalone",
+  "background_color": "#131314",
+  "theme_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/delete-chat.jpg",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/interface.jpg",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/response.jpg",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/home-page.jpg",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Homework Help",
+      "short_name": "Homework",
+      "description": "Get help with homework and assignments",
+      "url": "/?action=homework",
+      "icons": [{ "src": "/images/home-page.jpg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Email Writing",
+      "short_name": "Email",
+      "description": "Get help writing professional emails",
+      "url": "/?action=email",
+      "icons": [{ "src": "/images/promt.jpg", "sizes": "192x192" }]
+    }
+  ],
+  "categories": ["productivity", "education", "utilities"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [],
+  "screenshots": [
+    {
+      "src": "/images/promt.jpg",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "platform": "wide",
+      "label": "Chat Interface of DusGPT"
+    },
+    {
+      "src": "/images/response.jpg",
+      "sizes": "720x1280",
+      "type": "image/png",
+      "platform": "narrow",
+      "label": "Mobile Interface of DusGPT"
+    }
+  ],
+  "share_target": {
+    "action": "/share-target/",
+    "method": "GET",
+    "params": {
+      "title": "DusGPT",
+      "text": "Here is you promt",
+      "url": "https://dusprogram.github.io/dusgpt/"
+    }
+  }
+}

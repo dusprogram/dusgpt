@@ -122,7 +122,7 @@ The application stores:
 
 ## Known Issues
 
-- Add any known issues or limitations here
+- MIIT
 
 ## Future Improvements
 
